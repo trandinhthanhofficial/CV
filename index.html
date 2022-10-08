@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trần Đình Thành</title>
+    <link rel="stylesheet" href="assets/css/cvnew.css">
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+        
+        body {
+          background-color: #0fb9f1;
+          font-family: Helvetica, sans-serif;
+        }
+        /* Style the tab */
+        .tab {
+            float: left;
+            border: 1px solid rgb(232, 113, 230);
+            background-color: #f1f1f1;
+            width: 30%;
+            height: 195px;
+        }
+        /* Style the buttons inside the tab */
+        .tab button {
+            display: block;
+            background-color: inherit;
+            color: black;
+            padding: 22px 16px;
+            width: 100%;
+            border: none;
+            outline: none;
+            text-align: left;
+            cursor: pointer;
+            transition: 0.3s;
+            font-size: 17px;
+        }
+        /* Change background color of buttons on hover */
+        .tab button:hover {
+            background-color: rgb(165, 157, 157);
+        }
+        /* Create an active/current "tab button" class */
+        .tab button.active {
+            background-color: rgb(203, 141, 141);
+        }
+        /* Style the tab content */
+        .tabcontent {
+            float: left;
+            padding: 0px 10px;
+            border: 1px solid rgb(231, 63, 211);
+            width: 70%;
+            border-left: none;
+            height: 195px;
+            background-color: rgb(174, 179, 179);
+            font-size: 55%;
+            margin: 0px;
+            padding-bottom: 20%;
+        }
+        /*from to mail*/
+        input[type=text], select, textarea {
+          width: 100%;
+          padding: 12px;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          resize: vertical;
+        }
+        label {
+          padding: 12px 12px 12px 0;
+          display: inline-block;
+        }
+        input[type=submit] {
+          background-color: #04AA6D;
+          color: white;
+          padding: 12px 20px;
+          border: none;
+          border-radius: 4px;
+          cursor: pointer;
+          float: right;
+        }
+        input[type=submit]:hover {
+          background-color: #45a049;
+        }
+        .container {
+          border-radius: 5px;
+          background-color: #ffffff;
+          padding: 40px;
+        }
+        .from_title {
+            text-align: center;
+        }
+        .col-25 {
+          float: left;
+          width: 15%;
+          margin-top: 6px; 
+        }
+        .col-75 {
+          float: left;
+          width: 75%;
+          margin-top: 6px;
+        }
+        /* .row:after {
+          content: "";
+          display: table;
+          clear: both;
+          height: 30px;
+        } */
+        #cuaban{
+            width:100%;
+        }
+        .dien_from{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        .dien_from .row{
+            width:100%;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+        }
+        .cha{
+            width:50%;
+        }
+
+        #ok{
+            position: relative;
+            right:45%;
+        }
+    </style>
+</head>
+<body>
+    <div class="site">
+        <header class="site_header">
+                <!-- menu -->
+                <div class="site_header_wrap">
+                    <div class="logo">
+                        <a><img src="assets/images/dinhthanhlg.png"></a>
+                    </div>
+                    <div class="menu">
+                        <ul class="menu_list">
+                            <li class ="menu_list_item">
+                                <a href="#paralla">Trang Chủ</a>
+                            </li>
+                            <li class ="menu_list_item">
+                                <a href="#skills_info">Thông Tin</a>
+                            </li>
+                            <li class ="menu_list_item">
+                                <a href="#service">Dịch Vụ</a>
+                            </li>
+                            <li class ="menu_list_item">
+                                <a href="">Phản Hồi Khách Hàng</a>
+                            </li>
+                            <li class ="menu_list_item">
+                                <a href="#from">DK Nhận Thông Tin</a>
+                            </li>
+                            <li class ="menu_list_item">
+                                <a href="">Liên Hệ</a>
+                            </li>   
+                        </ul>
+                    </div>
+                </div>
+                <!-- end-menu -->
+        </header>
+
+        <div id="paralla" class="parallax"> <!--parallax -->
+
+            <div class="site_header_infomation">
+                <div class="menu">
+                    <div class="menu_welcome">
+                        <div class="menu_welcome_items">
+                            <h2>Welcome</h2>
+                        </div>
+                    </div>
+                    <div class="menu_name">
+                        <div class="hieu_ung_chu" class="menu_name_items">
+                            <h1>I am <span class="danh_chu" data-thoiGianDoi="500" data-chu='["Trần Đình Thành", "a Developer", "a Desigin tools"]'></span></h1>
+                        </div>
+                    </div>
+                    <!--run letters-->
+                    <script src="run_letters.js"></script>
+                    <div class="menu_function">
+                        <ul class="menu_function_items">
+                            <li>
+                                <a class="facebook" href="https://www.facebook.com/trandinhthanh.official" title="facebook">
+                                    <img src="assets/images/facebook.jpg">
+                                </a>
+                            </li>
+                            <li>
+                                <a class="gmail" href="mailto:trandinhthanh.official@gmail.com" title="gmail">
+                                    <img src="assets/images/gmail.jpg">
+                                </a>
+                            </li>
+                            <li>
+                                <a class="twitter" href="https://twitter.com/trandinhthanh73" title="twitter">
+                                    <img src="assets/images/tweter.jpg">
+                                </a>
+                            </li>
+
+                            <li>
+                                <a class="instagram" href="#" title="instagram">
+                                    <img src="assets/images/instagram.jpg">
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <main class="site_main">
+
+            <div class="site_main_infomation">
+                <div class="avatar">
+                    <div class="avatar_image"> 
+                        <img src="assets/images/avatar.jpg">
+                    </div>
+                </div>
+                <div class="profile">
+                    <div class="profile_menu">
+                        <div class="profile_menu_iam">
+                            <h2>I'am Trần Đình Thành</h2>
+                        </div>
+                        <div id="skills_info" class="profile_menu_word">
+                            <h4>Developer and desigin tools</h4>
+                            <hr>
+                            <p>Chào mừng bạn đến với trang web chính thức của Trần Đình Thành</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <!--infromation-->
+            <div class='infromation'>
+                <div class='title_skills_info' style='visibility: visible;'>
+                  <h3>Skilss &amp; Info</h3>
+                </div>
+                <div class="skills_info">
+                      <!--Skill-->
+                    <div class="skills">
+                            <li style="font-family: Arial, Helvetica, sans-serif; color: black; font-style: oblique; font-size: 14px; margin: 20px 10px 0 0px;">
+                                <div class="skills_1">
+                                    <ul>
+                                        <li>
+                                            <div class="skill_name">
+                                                <strong >SEO WEB</strong>
+                                            </div>
+                                            <div class="skill_progress">
+                                                <span style="width: 70%;"></span>
+                                            </div>
+                                            <div class="skill_per">70%</div>
+                                        </li>
+                                        <li>
+                                            <div class="skill_name">
+                                                <strong >HTML, CSS</strong>
+                                            </div>
+                                            <div class="skill_progress">
+                                                <span style="width: 30%;"></span>
+                                            </div>
+                                            <div class="skill_per">30%</div>
+                                        </li>
+                                        <li>
+                                            <div class="skill_name">
+                                                <strong >C, C++</strong>
+                                            </div>
+                                            <div class="skill_progress">
+                                                <span style="width: 50%;"></span>
+                                            </div>
+                                            <div class="skill_per">50%</div>
+                                        </li>
+                                        <li>
+                                            <div class="skill_name">
+                                                <strong >Phần mềm, TOOLS</strong>
+                                            </div>
+                                            <div class="skill_progress">
+                                                <span style="width: 60%;"></span>
+                                            </div>
+                                            <div class="skill_per">60%</div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                    </div>
+                     <!--Skill-->
+
+                     <!--Info-->
+                    <div class='info'>
+                        <ul class='profile-list'>
+                            <li class='clearfix'>
+                                <strong class='list-title'>Age:</strong>
+                                <span class='cont'>21</span>
+                            </li>
+                            <li class='clearfix'>
+                                <strong class='list-title'>Address:</strong>
+                                <span class='cont'>Số 70, đ.Phan Công Tích, p.Trung Đô, tp.Vinh - Nghệ An</span>
+                            </li>
+                            <li class='clearfix'>
+                                <strong class='list-title'>Facebook:</strong>
+                                <span class='cont'>facebook.com/trandinhthanh.official</span>
+                            </li>
+                            <li class='clearfix'>
+                                <strong class='list-title'>E-mail:</strong>
+                                <span class='cont'><a href='mailto:trandinhthanh.official@gmail.com'>trandinhthanh.official@gmail.com</a></span>
+                            </li>
+                            <li class='clearfix'>
+                                <strong class='list-title'>Phone:</strong>
+                                <span class='cont'><a href='tel:+848862449xx'>+848862449xx</a></span>
+                            </li>
+                            <li class='clearfix'>
+                                <strong class='list-title'><button name="button" type="button">Birthday</button></strong>
+                                <span class='cont'><i class='fa fa-calendar'/>March 07, 2001</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--Info-->
+                </div>
+            </div>
+            <!--end -infromation-->
+                
+            <!-- multiple information -->
+            <div class="flex-container">
+                <div id= "service" class="flex-item no1">
+                    <div class="site_main_infomation">
+                        <div class="avatar">
+                            <div class="avatar_image"> 
+                                <img src="assets/images/job.png">
+                            </div>
+                        </div>
+                        <div class="profile_1">
+                            <div class="profile_menu_1">
+                                <h4>Kinh Nghiệm Làm Việc</h4>
+                                <hr>
+                                <div class="kn">
+                                    <h5 id="kn_h5">Công ty DDI.VN | 07/2020 - Hiện tại</h5>
+                                    <h5>SEO website, viết content</h5>
+                                    <ul class="kn_conten">
+                                        <li>Viết nội dung, thiết kế cho web</li>
+                                        <li>SEO từ khóa lên top 1 tìm kiếm</li>
+                                        <li>Nhanh chóng chỉ trong 1 tuần</li>
+                                    </ul>
+                                </div>
+                                <div class="kn">
+                                    <h5 id="kn_h5">Viết TOOLS | 06/2021 - Hiện tại</h5>
+                                    <h5>Cung cấp tools youtube, facebook...</h5>
+                                    <ul class="kn_conten">
+                                        <li>Viết tools theo yêu cầu</li>
+                                        <li>Hỗ trợ xây dựng MMO</li>
+                                        <li>Cung cấp tài khoản youtube</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex-item no2">
+                    <div class="site_main_infomation">
+                        <div class="avatar">
+                            <div class="avatar_image"> 
+                                <img src="assets/images/hocvan.png">
+                            </div>
+                        </div>
+                        <div class="profile">
+                            <div class="profile_menu">
+                                <h4 id="title_hoc_van">Học Vấn</h4>
+                                <hr>
+                                <div class="hoc_van">
+                                    <div class="tab">
+                                        <button class="tablinks" onclick="openCity(event, 'London')" id="defaultOpen">Học Vấn</button>
+                                        <button class="tablinks" onclick="openCity(event, 'Paris')">Mục Tiêu Nghề Nghiệp</button>
+                                        <button class="tablinks" onclick="openCity(event, 'Tokyo')">Sở Thích</button>
+                                    </div>
+                                    
+                                    <div id="London" class="tabcontent">
+                                        <h4>Học Vấn</h4>
+                                        <p>Công nghệ thông tin | 10/2019 - 5/2024</p>
+                                        <p>Đại Học Vinh | Tốt nghiệp loại..., điểm trung bình...</p>
+                                        <p>Hoàn thành khóa học maketting 7/2021
+                                    </div>
+                                    
+                                    <div id="Paris" class="tabcontent">
+                                        <h4>Mục Tiêu Nghề Nghiệp</h4>
+                                        <p>Áp dụng những kinh nghiệm về kĩ năng lập trình để phát triển nền tảng Smart Contract </p> 
+                                        <p>Trở thành deverloper chuyên nghiệp trên nền tảng Smart Contract, đón đầu xu thế mới</p>
+                                    </div>
+                                    
+                                    <div id="Tokyo" class="tabcontent">
+                                        <h4>Sở Thích</h4>
+                                        <p>Thích Một mình</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--from to mail -->
+            <from>
+                <div id="from" class="from_mail">
+                    <div class="container">
+                        <div class="from_title">
+                            <h2>Hỗ trợ tư vấn dịch vụ</h2>
+                        </div>
+                        <form class="cha"action="/action_page.php">
+                            <div class="dien_from">
+                                <div class="row">
+                                        <div class="col-25">
+                                            <label id="hovaten"for="fname">Họ và tên</label>
+                                        </div>
+                                        <div class="col-75">
+                                            <input id="cuaban"type="text" name="firstname" placeholder="Tên của bạn...">
+                                        </div>
+                                </div>
+                                <div class="row">
+                                        <div class="col-25">
+                                            <label id="email" for="lname">Email</label>
+                                        </div>
+                                        <div class="col-75">
+                                            <input id="cuaban"type="text" id="lname" name="lastname" placeholder="Email của ban...">
+                                        </div>
+                                </div>
+                                <div class="row">
+                                        <div class="col-25">
+                                            <label for="subject">Nội dung</label>
+                                        </div>
+                                        <div class="col-75">
+                                            <textarea id="cuaban" name="subject" placeholder="nội dung..." style="height:200px">
+                                            </textarea>
+                                        </div>
+                                </div>
+                                <div class="row">
+                                        <input id="ok"type="submit" value="Gửi">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </from>
+        </main>
+    </div>
+    <script>
+        //Function 
+        function openCity(evt, cityName) {
+          var i, tabcontent, tablinks;
+          tabcontent = document.getElementsByClassName("tabcontent");
+          for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+          }
+          tablinks = document.getElementsByClassName("tablinks");
+          for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+          }
+          document.getElementById(cityName).style.display = "block";
+          evt.currentTarget.className += " active";
+        }
+        
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+    </script>
+</body>
+</html>
